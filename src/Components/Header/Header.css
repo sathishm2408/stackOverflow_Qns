@@ -1,0 +1,37 @@
+.navbar{
+    position:sticky;
+    background-color:#030000;
+    padding-bottom: 2% !important;
+    padding-top: 2% !important;
+    display: flex;
+    Z-index:1;
+    border-radius: 0px !important;
+  }
+
+  .logo{
+    color: white;
+    font-size: 22px;
+    font-family: cursive;
+    float: left;
+  }
+
+  .container-fluid{
+      display: block !important;
+  }
+
+  .collapse:not(.show) {
+    display: none !important;
+}
+
+.search{
+    background-color: wheat;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo{
+        margin-top: 4%;
+    }
+    .search-form{
+        display: none;
+    }
+}

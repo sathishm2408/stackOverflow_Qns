@@ -5,10 +5,15 @@ const initialState = {
 };
 
 const getProductsReducer = (state = initialState, action) => {
-    const { type } = action;
+    const { type, data } = action;
 
     switch (type) {
-        
+        case GETQUESTIONS_SUCCESS:
+            console.log("GETQUESTIONS_SUCCESS in reducer", type,data)
+            return {
+                ...state,
+                questions: data
+            }
         default:
             return state
     }
