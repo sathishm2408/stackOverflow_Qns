@@ -3,10 +3,12 @@ import * as api from '../api/index'
 
 export function getQuestions() {
     return dispatch => {
+          console.log("in actions");
+          
           api.getQuestions()
                 .then(data => {
                       dispatch({ type: actionTypes.GETQUESTIONS_SUCCESS, data });
-                      // dispatch({type:actionTypes.SEARCH_CART})
+                     
                 })
                 .catch(e => {
                       return dispatch({ type: actionTypes.GETQUESTIONS_FAILED, message: e.message })

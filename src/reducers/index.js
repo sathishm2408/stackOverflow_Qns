@@ -8,7 +8,7 @@ const getProductsReducer = (state = initialState, action) => {
     const { type, data } = action;
 
     switch (type) {
-        case GETQUESTIONS_SUCCESS:
+        case actionTypes.GETQUESTIONS_SUCCESS:
             console.log("GETQUESTIONS_SUCCESS in reducer", type,data)
             return {
                 ...state,
