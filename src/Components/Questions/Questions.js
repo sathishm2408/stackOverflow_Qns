@@ -2,19 +2,25 @@ import React from 'react';
 import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { Card } from 'semantic-ui-react'
+import './questions.css'
 
 class Questions extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
     render() {
+        let {q} = this.props
+        let cdate = new Date(this.props.q.creation_date)
         return (
             <div className="questionDiv">
-                <Card.Group>
+                <Card.Group className="cardDiv">
                     <Card fluid>
                         <Card.Content>
-                            <Card.Header>Matthew Harris</Card.Header>
-                            <Card.Meta>Co-Worker</Card.Meta>
+                            <Card.Header>{q.title}</Card.Header>
+                            <Card.Meta>Created on - {cdate.toString()}</Card.Meta>
                             <Card.Description>
-                                Matthew is a pianist living in Nashville.
+                                created by - {q.owner.display_name}
                             </Card.Description>
                         </Card.Content>
                     </Card>

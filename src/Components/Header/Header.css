@@ -26,6 +26,14 @@
 .search{
     background-color: wheat;
 }
+.search-form{
+    float: right !important;
+}
+
+.i-search{
+    background-color: wheat;
+    border-radius: 2px;
+}
 
 @media only screen and (max-width: 768px) {
     .logo{
