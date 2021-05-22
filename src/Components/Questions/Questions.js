@@ -1,20 +1,19 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
-import { Card } from 'semantic-ui-react'
+import { Button, Icon, Modal, Card } from 'semantic-ui-react';
+
 import './questions.css'
 
 class Questions extends React.Component {
-    constructor(props) {
-        super(props)
-    }
+ 
 
     render() {
-        let {q} = this.props
+        let { q } = this.props
         let cdate = new Date(this.props.q.creation_date)
         return (
-            <div className="questionDiv">
-                <Card.Group className="cardDiv">
+            <div className="questionDiv" key={q.question_id}>
+                <Card.Group className="cardDiv" onClick={() => this.props.modalChange(q.title, q.link)}>
                     <Card fluid>
                         <Card.Content>
                             <Card.Header>{q.title}</Card.Header>
@@ -26,11 +25,8 @@ class Questions extends React.Component {
                     </Card>
 
                 </Card.Group>
-
-
+          
             </div>
-
-
         )
     }
 
