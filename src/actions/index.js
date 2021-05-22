@@ -8,11 +8,12 @@ export function getQuestions() {
           api.getQuestions()
                 .then(data => {
                       dispatch({ type: actionTypes.GETQUESTIONS_SUCCESS, data });
-                     
+                      
                 })
                 .catch(e => {
+                          console.log("eeeeeee",e)
                       return dispatch({ type: actionTypes.GETQUESTIONS_FAILED, message: e.message })
-                    //   console.log(e.message)
+                  
                 })
     }
 }

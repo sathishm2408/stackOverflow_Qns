@@ -12,7 +12,14 @@ const getProductsReducer = (state = initialState, action) => {
             console.log("GETQUESTIONS_SUCCESS in reducer", type,data)
             return {
                 ...state,
-                questions: data
+                questions: data,
+                apiError: false
+            }
+        case actionTypes.GETQUESTIONS_FAILED:
+            console.log("GETQUESTIONS_FAILED in reducer", type,data)
+            return {
+                ...state,
+                apiError: true
             }
         default:
             return state

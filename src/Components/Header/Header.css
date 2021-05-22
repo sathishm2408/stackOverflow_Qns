@@ -13,6 +13,11 @@
     font-size: 22px;
     font-family: cursive;
     float: left;
+    margin-top: 5%;
+  }
+
+  .logo:hover{
+    color: lightgoldenrodyellow;
   }
 
   .container-fluid{

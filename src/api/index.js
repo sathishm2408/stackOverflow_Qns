@@ -11,17 +11,3 @@ const getQuestions = async () => {
 }
 
 export { getQuestions };
-
-// const options = {
-//   method: 'POST',
-//   headers: { 'content-type': 'application/x-www-form-urlencoded' },
-//   data: qs.stringify(data),
-//   url,
-// };
-
-// headers: {
-//   'Access-Control-Allow-Origin': '*',
-//   'access-control-allow-methods': 'GET',
-//   'content-type': 'application/json',
-//   'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
-// }

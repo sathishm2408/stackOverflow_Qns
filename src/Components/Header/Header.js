@@ -3,7 +3,6 @@ import './Header.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
-import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 class Header extends React.Component {

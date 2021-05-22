@@ -16,7 +16,7 @@ class Questions extends React.Component {
                 <Card.Group className="cardDiv" onClick={() => this.props.modalChange(q.title, q.link)}>
                     <Card fluid>
                         <Card.Content>
-                            <Card.Header>{q.title}</Card.Header>
+                            <Card.Header className="qTitle">{q.title}</Card.Header>
                             <Card.Meta>Created on - {cdate.toString()}</Card.Meta>
                             <Card.Description>
                                 created by - {q.owner.display_name}
