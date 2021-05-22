@@ -40,6 +40,6 @@
         margin-top: 4%;
     }
     .search-form{
-        display: none;
+        display: none !important;
     }
 }
